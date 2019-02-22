@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Snack Machine</title>
+    <style type="text/css">
+      .btn-primary{
+        background-color: #007BFF;
+        border-color: #007BFF;
+      }
+      .btn-success{
+        background-color: #28A745;
+        border-color: #28A745;
+      }
+      button{
+        color: #FFF;
+        width: 100%;
+        font-size: 1em;
+        height: 3em;
+        font-weight: 400;
+        transition: 0.15s;
+      }
+      button:hover{
+        cursor: pointer;
+      }
+      table{
+        width: 100%;
+        border-spacing: 2px;
+        margin-bottom: 1rem;
+        color: #212529;
+      }
+      thead{
+        color: #FFF;
+        background-color: #343A40;
+        border-color: #454D55;
+      }
+      .entry{
+        font-size: 2em;
+      }
+      .header{
+        font-size: 2.5em;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <table class="table" border="1 solid" style="width: 100%;">
+        <thead>
+          <tr>
+            <th class="header">Items</th>
+            <th class="header">Info</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="entry">Chewing Gums: 10</td>
+            <td class="entry">Money Inside Machine: 00.00</td>
+          </tr>
+          <tr>
+            <td class="entry">Chips: 10</td>
+            <td class="entry">Money In Transaction: 00.00</td>
+          </tr>
+          <tr>
+            <td class="entry">Chocolate: 10</td>
+            <td class="entry">Change: 00.00</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table border="1 solid" style="margin-top: 12%">
+        <thead>
+          <tr>
+            <th colspan="5" class="header">Insert Money</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <button class="btn-primary"> 0.25 JOD </button>
+            </td>
+            <td>
+              <button class="btn-primary"> 0.5 JOD </button>
+            </td>
+            <td>
+              <button class="btn-primary"> 1.0 JOD </button>
+            </td>
+            <td>
+              <button class="btn-primary"> 5.0 JOD </button>
+            </td>
+            <td>
+              <button class="btn-primary"> 10.0 JOD </button>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="3" style="padding-top: 2%;">
+                <button class="btn-success">BUY</button>
+            </td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
