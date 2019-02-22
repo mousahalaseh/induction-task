@@ -1,0 +1,20 @@
+1- What are Mutation Observers in JavaScript?
+
+MutationObservers API gives the developer a way to listen and react to changes
+that happen to the DOM. It fires one bulk callback in an async fashion, which
+solves the "Mutation Events" issue of performance.
+
+-------------------------------------------------------------------------------
+
+2- Explain 3 different CSS selectors.
+
+a) ID selector: they're special because no two attributes can have the same ID value within a conformant document. (E.g: #top).
+c) Type selector: represents an instance of the element type in the document tree (E.g: ul).
+c) Pseudo-classes: It provides selection based on information that lies outside of the DOM. (E.g: a:hover).
+
+-------------------------------------------------------------------------------
+
+3- What is the difference between SessionStorage and LocalStorage in HTML5?
+
+localStorage has no expiration time, it's available until explicitly deleted from the browser's cache.
+sessionStorage gets cleared when the page session ends, it's only available on the browser's window.
