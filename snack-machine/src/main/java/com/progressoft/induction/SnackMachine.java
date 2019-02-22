@@ -40,8 +40,8 @@ public class SnackMachine{
   void insertMoney(Object obj) throws IllegalArgumentException{
     Money amount = (Money) obj;
 
-    if (MONEY_UNITS.contains(amount.state))
-      money_in_trx = money_in_trx.add(amount.state);
+    if (MONEY_UNITS.contains(amount.value))
+      money_in_trx = money_in_trx.add(amount.value);
     else
       throw new IllegalArgumentException();
   }
@@ -90,4 +90,3 @@ public class SnackMachine{
     throw new IllegalStateException();
   }
 }
-

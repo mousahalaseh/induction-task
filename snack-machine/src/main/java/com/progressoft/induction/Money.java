@@ -9,13 +9,13 @@ public class Money {
   static final BigDecimal DINAR         = BigDecimal.valueOf(1.0);
   static final BigDecimal FIVE_DINAR    = BigDecimal.valueOf(5.0);
   static final BigDecimal TEN_DINAR     = BigDecimal.valueOf(10.0);
-               BigDecimal state         = ZERO;
+               BigDecimal value         = ZERO;
 
   public Money(){}
 
   public Money(BigDecimal amount) throws IllegalArgumentException{
     if (amount != null && !isNegative(amount)){
-      this.state = amount;
+      this.value = amount;
     }else{
       throw new IllegalArgumentException();
     }
@@ -24,7 +24,7 @@ public class Money {
   boolean isLessThan(Money amount){
     if (amount == null)
       return false;
-    return this.state.compareTo(amount.state) == -1;
+    return this.value.compareTo(amount.value) == -1;
   }
 
   boolean isNegative(BigDecimal amount){
@@ -34,24 +34,23 @@ public class Money {
   Money subtract(Money amount) throws IllegalArgumentException{
     if (this.isLessThan(amount))
       throw new IllegalArgumentException();
-    return new Money(this.state.subtract(amount.state));
+    return new Money(this.value.subtract(amount.value));
   }
 
   Money add(Money amount){
-    return new Money(this.state.add(amount.state));
+    return new Money(this.value.add(amount.value));
   }
 
-  BigDecimal getState(){
-    return this.state;
+  BigDecimal getvalue(){
+    return this.value;
   }
 
   @Override
   public boolean equals(Object obj){
     if (obj instanceof Money)
-      return this.state.compareTo(((Money)obj).state) == 0;
+      return this.value.compareTo(((Money)obj).value) == 0;
     else if (obj instanceof BigDecimal)
-      return this.state.compareTo((BigDecimal)(obj)) == 0;
+      return this.value.compareTo((BigDecimal)(obj)) == 0;
     return false;
   }
 }
-
